@@ -9,77 +9,77 @@ const categories = ['All', 'False Ceiling', 'Drywall Partition', 'Interior Desig
 
 const galleryItems = [
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.39-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.39-PM.jpeg',
     title: 'Commercial Grid False Ceiling',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.40-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.40-PM.jpeg',
     title: 'Modern Residential POP Design',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.41-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.41-PM.jpeg',
     title: 'Acoustic Drywall Partitioning',
     category: 'Drywall Partition',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.42-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.42-PM.jpeg',
     title: 'Warm Cove Lighting Ceiling',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.47-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.47-PM.jpeg',
     title: 'Executive Office Cabin Design',
     category: 'Interior Design',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.49-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.51.49-PM.jpeg',
     title: 'Living Room Wooden Accent Ceiling',
     category: 'Interior Design',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.52.14-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.52.14-PM.jpeg',
     title: 'Metal Stud Wall Framing',
     category: 'Drywall Partition',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.52.18-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.52.18-PM.jpeg',
     title: 'Decorative Gypsum Ceiling Board',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/WhatsApp-Image-2026-01-22-at-12.52.21-PM.jpeg',
+    src: './gallary/WhatsApp-Image-2026-01-22-at-12.52.21-PM.jpeg',
     title: 'Contemporary Workspace Interior',
     category: 'Interior Design',
   },
   {
-    src: '/gallary/about-us-page-cta-image.webp',
+    src: './gallary/about-us-page-cta-image.webp',
     title: 'Corporate Conference Room Layout',
     category: 'Interior Design',
   },
   {
-    src: '/gallary/gallery-image-1.webp',
+    src: './gallary/gallery-image-1.webp',
     title: 'Minimalist Gypsum Board Ceiling',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/gallery-image-2.webp',
+    src: './gallary/gallery-image-2.webp',
     title: 'Stepped POP Ceiling & Spotlights',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/gallery-image-3.webp',
+    src: './gallary/gallery-image-3.webp',
     title: 'Glass & Drywall Combined Partition',
     category: 'Drywall Partition',
   },
   {
-    src: '/gallary/gallery-image-4.webp',
+    src: './gallary/gallery-image-4.webp',
     title: 'Luxury Perimeter Cove Ceiling',
     category: 'False Ceiling',
   },
   {
-    src: '/gallary/gallery-image-5.webp',
+    src: './gallary/gallery-image-5.webp',
     title: 'Reception Lobby Wall Paneling',
     category: 'Interior Design',
   },

@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col items-center sm:items-start">
             <Link to="/" className="inline-block mb-6">
               <img
-                src="/ABS_Logo-2.png"
+                src="./ABS_Logo-2.png"
                 alt="ABS Enterprises Logo"
                 className="h-14 sm:h-16 md:h-20 w-auto object-contain rounded-xl bg-plaster-100/95 px-3 sm:px-4 py-2 hover:bg-plaster-100 transition-all shadow-soft"
               />

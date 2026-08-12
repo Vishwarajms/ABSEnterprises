@@ -5,12 +5,12 @@ import SectionTitle from '../ui/SectionTitle';
 import { fadeUp, staggerContainer, viewportOnce } from '../../utils/motion';
 
 const projects = [
-  { title: 'Layered Living Room Ceiling', location: 'Hadapsar', img: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.47-PM.jpeg', span: 'lg:col-span-2 lg:row-span-2' },
-  { title: 'Office Acoustic Ceiling', location: 'Kharadi', img: '/gallary/gallery-image-2.webp', span: '' },
-  { title: 'Fire-Rated Partition Fit-out', location: 'Magarpatta', img: '/gallary/gallery-image-3.webp', span: '' },
-  { title: 'Cove-Lit Bedroom Ceiling', location: 'Wagholi', img: '/gallary/gallery-image-4.webp', span: '' },
-  { title: 'Retail Baffle Ceiling', location: 'Hadapsar', img: '/gallary/gallery-image-5.webp', span: '' },
-  { title: 'Full Home Interior', location: 'Manjari', img: '/gallary/WhatsApp-Image-2026-01-22-at-12.51.39-PM.jpeg', span: '' },
+  { title: 'Layered Living Room Ceiling', location: 'Hadapsar', img: './gallary/WhatsApp-Image-2026-01-22-at-12.51.47-PM.jpeg', span: 'lg:col-span-2 lg:row-span-2' },
+  { title: 'Office Acoustic Ceiling', location: 'Kharadi', img: './gallary/gallery-image-2.webp', span: '' },
+  { title: 'Fire-Rated Partition Fit-out', location: 'Magarpatta', img: './gallary/gallery-image-3.webp', span: '' },
+  { title: 'Cove-Lit Bedroom Ceiling', location: 'Wagholi', img: './gallary/gallery-image-4.webp', span: '' },
+  { title: 'Retail Baffle Ceiling', location: 'Hadapsar', img: './gallary/gallery-image-5.webp', span: '' },
+  { title: 'Full Home Interior', location: 'Manjari', img: './gallary/WhatsApp-Image-2026-01-22-at-12.51.39-PM.jpeg', span: '' },
 ];
 
 function GalleryTile({ p }) {

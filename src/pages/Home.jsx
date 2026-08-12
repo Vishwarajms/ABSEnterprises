@@ -92,7 +92,7 @@ export default function Home() {
           >
             <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-brass-400/30 shadow-lift">
               <img
-                src="/founder.png"
+                src="./founder.png"
                 alt="Amit Patil - Founder of ABS Enterprises"
                 className="w-full h-full object-cover"
               />

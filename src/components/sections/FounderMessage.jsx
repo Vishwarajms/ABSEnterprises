@@ -18,7 +18,7 @@ export default function FounderMessage() {
           className="lg:col-span-5"
         >
           <ImageReveal className="rounded-[2rem] aspect-[4/5] border border-plaster-100/10 overflow-hidden">
-            <img src="/founder.png" alt="Founder ABS Enterprises" className="w-full h-full object-cover grayscale" />
+            <img src="./founder.png" alt="Founder ABS Enterprises" className="w-full h-full object-cover grayscale" />
           </ImageReveal>
         </motion.div>
         <motion.div

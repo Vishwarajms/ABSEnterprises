@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className="container flex items-center justify-between h-24">
           <Link to="/" className="flex items-center group">
             <img
-              src="/ABS_Logo-2.png"
+              src="./ABS_Logo-2.png"
               alt="ABS Enterprises Logo"
               className="h-28 w-auto object-contain drop-shadow-md"
             />
