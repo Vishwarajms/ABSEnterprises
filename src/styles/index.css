@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: #B8912F;
+  color: #F7F4EE;
+}
+
+body {
+  font-feature-settings: 'ss01' 1, 'cv01' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    @apply font-display text-ink-800;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+  :focus-visible {
+    outline: 2px solid #B8912F;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+
+  /* ---------- Skip link (a11y) ---------- */
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 focus:translate-y-0 rounded-full bg-ink-800 text-plaster-100 text-sm font-medium px-5 py-3 transition-transform duration-200;
+  }
+
+  /* ---------- Eyebrow / kicker ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-brass-500;
+  }
+
+  .kicker-number {
+    @apply font-mono text-[0.7rem] tracking-widest text-brass-500/70;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 font-body text-sm font-semibold tracking-wide transition-all duration-[420ms] overflow-hidden isolate;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn svg {
+    @apply transition-transform duration-[420ms];
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn:hover svg {
+    transform: translateX(3px);
+  }
+
+  .btn-primary {
+    @apply btn bg-ink-800 text-plaster-100 shadow-soft hover:shadow-lift active:scale-[0.97];
+  }
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 -z-10 bg-gradient-to-r from-ink-700 to-brass-600 opacity-0 transition-opacity duration-[420ms];
+  }
+  .btn-primary:hover::before { opacity: 1; }
+
+  .btn-accent {
+    @apply btn bg-brass-400 text-ink-900 shadow-soft hover:shadow-lift active:scale-[0.97];
+  }
+  .btn-accent::before {
+    content: '';
+    @apply absolute inset-0 -z-10 bg-gradient-to-r from-brass-300 to-brass-500 opacity-0 transition-opacity duration-[420ms];
+  }
+  .btn-accent:hover::before { opacity: 1; }
+
+  .btn-outline {
+    @apply btn border border-ink-800/15 text-ink-800 hover:border-ink-800 active:scale-[0.97];
+  }
+
+  .btn-outline-light {
+    @apply btn border border-plaster-100/25 text-plaster-100 hover:border-plaster-100/70 hover:bg-plaster-100/[0.06] active:scale-[0.97];
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center gap-2 text-sm font-semibold text-ink-800;
+  }
+  .btn-ghost::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-px w-full bg-ink-800/25 origin-left scale-x-100 transition-transform duration-300;
+  }
+  .btn-ghost:hover::after {
+    @apply bg-brass-400;
+    transform: scaleX(1.06);
+  }
+
+  /* Underline-reveal link, for use inline in copy/nav */
+  .link-underline {
+    @apply relative bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat;
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    transition: background-size 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  .link-underline:hover { background-size: 100% 1px; }
+
+  /* ---------- Cards ---------- */
+  .card {
+    @apply rounded-[1.75rem] border border-ink-800/[0.06] bg-plaster-100 shadow-soft;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift hover:border-ink-800/[0.1];
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ---------- Layout rhythm ---------- */
+  .section-pad {
+    @apply py-24 md:py-32;
+  }
+  .section-pad-sm {
+    @apply py-16 md:py-20;
+  }
+
+  /* ---------- Decorative textures ---------- */
+  .grid-veil {
+    @apply pointer-events-none absolute inset-0 bg-grid bg-grid-cell opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)];
+  }
+
+  .noise-veil {
+    @apply pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .divider-fade {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-ink-800/10 to-transparent;
+  }
+
+  /* Animated gradient text — used sparingly, on a single emphasis word per view */
+  .text-gradient-shimmer {
+    background-image: linear-gradient(90deg, #B8912F 0%, #E7C876 25%, #B8912F 50%, #E7C876 75%, #B8912F 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+}
+
+/* Ripple effect for buttons */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 60%);
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.btn:active::after {
+  opacity: 1;
+  transform: scale(1.4);
+  transition: 0s;
+}
+
+/* Custom scrollbar for a more considered feel */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #0B1B2B22; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #0B1B2B44; }
